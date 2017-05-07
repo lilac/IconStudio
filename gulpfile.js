@@ -252,7 +252,7 @@ gulp.task('default', ['clean'], function (cb) {
 // Deploy to GitHub pages
 gulp.task('deploy', function() {
   return gulp.src('dist/**/*', {dot: true})
-    .pipe($.ghPages());
+    .pipe($.ghPages({branch: 'coding-pages'}));
 });
 
 // Load custom tasks from the `tasks` directory
