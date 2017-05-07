@@ -36,8 +36,8 @@ export class GenericIconGenerator extends BaseGenerator {
       container: '#inputs-form',
       fields: [
         new studio.ImageField('source', {
-          title: 'Source',
-          helpText: 'Must be transparent',
+          title: '源',
+          helpText: '必须透明',
           maxFinalSize: { w: 720, h: 720 }, // max render size, for SVGs
           defaultValueClipart: 'ac_unit',
           dropTarget: document.body,
@@ -49,28 +49,28 @@ export class GenericIconGenerator extends BaseGenerator {
         }),
         new studio.RangeField('size', {
           newGroup: true,
-          title: 'Asset size',
-          helpText: 'Size of the final asset',
+          title: '尺寸',
+          helpText: '最终生成图标的尺寸',
           min: 4,
           max: 200,
           defaultValue: 32,
           textFn: d => `${d}dp`,
         }),
         new studio.RangeField('padding', {
-          title: 'Asset padding',
-          helpText: 'Padding around the icon asset',
+          title: '衬垫',
+          helpText: '图标周围的衬垫',
           defaultValue: 8,
           textFn: d => `${d}dp`,
         }),
         new studio.ColorField('color', {
-          title: 'Color',
-          helpText: 'Set to transparent to retain original colors',
+          title: '颜色',
+          helpText: '要保留原始颜色请设置为透明',
           defaultValue: 'rgba(0, 0, 0, 0.54)',
           alpha: true
         }),
         (nameField = new studio.TextField('name', {
-          title: 'Name',
-          helpText: 'Used when generating ZIP files as the resource name.',
+          title: '名称',
+          helpText: '生成zip文件时使用为资源名',
           defaultValue: defaultNameForSourceValue_({})
         }))
       ]

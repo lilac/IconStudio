@@ -42,16 +42,16 @@ const GRID_OVERLAY_SVG =
 
 
 const DEFAULT_EFFECT_OPTIONS = [
-  { id: 'none', title: 'None' },
-  { id: 'elevate', title: 'Elevate' },
-  { id: 'shadow', title: 'Cast shadow' },
-  { id: 'score', title: 'Score' }
+  { id: 'none', title: '无' },
+  { id: 'elevate', title: '提升' },
+  { id: 'shadow', title: '阴影' },
+  { id: 'score', title: '刻痕' }
 ];
 
 
 const NO_SHAPE_EFFECT_OPTIONS = [
-  { id: 'none', title: 'None' },
-  { id: 'score', title: 'Score' }
+  { id: 'none', title: '无' },
+  { id: 'score', title: '刻痕' }
 ];
 
 
@@ -71,7 +71,7 @@ export class LauncherIconGenerator extends BaseGenerator {
       container: '#inputs-form',
       fields: [
         new studio.ImageField('foreground', {
-          title: 'Foreground',
+          title: '前景',
           maxFinalSize: { w: 720, h: 720 }, // max render size, for SVGs
           defaultValueTrim: 1,
           defaultValuePadding: .25,
@@ -80,29 +80,29 @@ export class LauncherIconGenerator extends BaseGenerator {
         }),
         new studio.ColorField('foreColor', {
           newGroup: true,
-          title: 'Color',
-          helpText: 'Set to transparent to use original colors',
+          title: '前景颜色',
+          helpText: '要使用原始颜色请设置为透明',
           alpha: true,
           defaultValue: 'rgba(96, 125, 139, 0)'
         }),
         (backColorField = new studio.ColorField('backColor', {
-          title: 'Background color',
+          title: '背景颜色',
           defaultValue: '#448aff'
         })),
         new studio.BooleanField('crop', {
-          title: 'Scaling',
+          title: '比例',
           defaultValue: false,
-          offText: 'Center',
-          onText: 'Crop'
+          offText: '居中',
+          onText: '裁剪'
         }),
         new studio.EnumField('backgroundShape', {
-          title: 'Shape',
+          title: '形状',
           options: [
-            { id: 'none', title: 'None' },
-            { id: 'square', title: 'Square' },
-            { id: 'circle', title: 'Circle' },
-            { id: 'vrect', title: 'Tall rect' },
-            { id: 'hrect', title: 'Wide rect' }
+            { id: 'none', title: '无' },
+            { id: 'square', title: '方形' },
+            { id: 'circle', title: '圆形' },
+            { id: 'vrect', title: '高矩形' },
+            { id: 'hrect', title: '宽矩形' }
           ],
           defaultValue: 'square',
           onChange: newValue => {
@@ -117,13 +117,13 @@ export class LauncherIconGenerator extends BaseGenerator {
           }
         }),
         (effectsField = new studio.EnumField('effects', {
-          title: 'Effect',
+          title: '效果',
           buttons: true,
           options: DEFAULT_EFFECT_OPTIONS,
           defaultValue: 'none'
         })),
         new studio.TextField('name', {
-          title: 'Name',
+          title: '名称',
           defaultValue: 'ic_launcher'
         })
       ]

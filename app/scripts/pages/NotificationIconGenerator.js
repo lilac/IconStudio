@@ -37,8 +37,8 @@ export class NotificationIconGenerator extends BaseGenerator {
       container: '#inputs-form',
       fields: [
         new studio.ImageField('source', {
-          title: 'Source',
-          helpText: 'Must be transparent',
+          title: '源',
+          helpText: '必须透明',
           maxFinalSize: { w: 128, h: 128 },
           defaultValueClipart: 'ac_unit',
           dropTarget: document.body,
@@ -50,8 +50,8 @@ export class NotificationIconGenerator extends BaseGenerator {
         }),
         (nameField = new studio.TextField('name', {
           newGroup: true,
-          title: 'Name',
-          helpText: 'Used when generating ZIP files.',
+          title: '名称',
+          helpText: '生成zip文件时使用为资源名',
           defaultValue: defaultNameForSourceValue_({})
         }))
       ]

@@ -75,21 +75,21 @@ export class NinePatchGenerator extends BaseGenerator {
       container: '#inputs-form',
       fields: [
         new studio.ImageField('source', {
-          title: 'Source graphic',
+          title: '源图',
           imageOnly: true,
           noTrimForm: true,
           noPreview: true,
           dropTarget: document.body
         }),
         new studio.EnumField('sourceDensity', {
-          title: 'Source density',
+          title: '源图密度',
           buttons: true,
           options: SOURCE_DENSITY_OPTIONS,
           defaultValue: '320'
         }),
         (nameField = new studio.TextField('name', {
-          title: 'Drawable name',
-          helpText: 'Used when generating ZIP files. Becomes <code>&lt;name&gt;.9.png</code>.',
+          title: '名称',
+          helpText: '生成zip文件时使用,变成<code>&lt;名称&gt;.9.png</code>。',
           defaultValue: 'example'
         }))
       ]

@@ -5,44 +5,42 @@ generatorGroups:
 - items:
   - url: icons-launcher.html
     image: res/generator-thumbs/icons-launcher.svg
-    title: Launcher icon generator
-    description: Generate launcher and store listing icons for your app.
+    title: 启动图标生成器
+    description: 生成移动应用（App）的启动图标。
 
   - url: icons-app-shortcut.html
     image: res/generator-thumbs/icons-app-shortcut.svg
-    title: App shortcut icon generator
-    description: Generate app launcher shortcut icons (Android 7.1+).
+    title: 应用快捷图标生成哭
+    description: 生成应用的快捷启动图标(适用于Android 7.1+)。
 
   - url: https://romannurik.github.io/AndroidIconAnimator/
     image: res/generator-thumbs/icon-animator.svg
     extraClasses: is-external
-    title: Android Icon Animator
-    description: Create vector drawables and vector icon animations.
+    title: 矢量图动画
+    description: 创建矢量图动画。
 
   - url: icons-notification.html
     image: res/generator-thumbs/icons-notification.svg
-    title: Notification icon generator
+    title: 通知栏图标生成器
     description:
-      Generate notification icons for your app. These show up
-      in the system status bar and notification shade.
+      生成移动应用的通知图标。它们显示在系统状态栏和通知栏。
 
   - url: nine-patches.html
     image: res/generator-thumbs/nine-patches.svg
-    title: Simple nine-patch generator
+    title: 简单伸缩图生成器
     description:
-      Generate nine-patch (.9.png) assets for your app, normally
-      used for custom UI widgets.
+      生成可伸缩图标(.9.png)，一般用于自定义组件。
 
   - url: icons-generic.html
     image: res/generator-thumbs/icons-generic.svg
-    title: Generic icon generator
+    title: 通用图标生成器
     description:
-      Generate square icons for custom use within your app.
+      生成方形的图标，用于各种场景。
 
   - url: icons-actionbar.html
     image: res/generator-thumbs/icons-actionbar.svg
-    title: Action bar/tab icon generator
-    description: Generate icons for the app bar or tab bars.
+    title: 动作栏/标签页图标生成器
+    description: 生成用于动作栏或标签页的图标。
 
 ---
 {% extends '_base.html' %}
@@ -54,10 +52,9 @@ generatorGroups:
 {% block body %}
 <div class="home-header">
   <div class="inner">
-    <h1>Android Asset Studio</h1>
+    <h1>图标工作室</h1>
     <p class="subtitle">
-      A collection of tools to easily generate assets such as launcher icons
-      for your Android app.
+      免安装，在线即用的工具集，能生成安卓应用的资源图标。
     </p>
   </div>
 </div>
@@ -78,8 +75,8 @@ generatorGroups:
 {% endfor %}
 <div class="home-footer">
   <div class="inner">
-    Created by <a href="https://twitter.com/romannurik">Roman Nurik</a>.
-    <a target="_blank" class="external-link" href="https://github.com/romannurik/AndroidAssetStudio">Source on GitHub</a>
+    由<a href="https://twitter.com/romannurik">Roman Nurik</a>创建。
+    <a target="_blank" class="external-link" href="https://github.com/romannurik/AndroidAssetStudio">源码</a>
   </div>
 </div>
 {% endblock %}

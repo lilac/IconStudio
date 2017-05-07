@@ -66,13 +66,13 @@ export class ImageField extends Field {
     var types;
     if (this.params_.imageOnly) {
       types = [
-        ['image', 'Select image']
+        ['image', '选择图片']
       ];
     } else {
       types = [
-        ['image', 'Image'],
-        ['clipart', 'Clipart'],
-        ['text', 'Text']
+        ['image', '图片'],
+        ['clipart', '剪贴画'],
+        ['text', '文字']
       ];
     }
 
@@ -155,7 +155,7 @@ export class ImageField extends Field {
       var clipartAttributionEl = $('<div>')
           .addClass('form-image-clipart-attribution')
           .html(`
-              For clipart sources, visit
+              源自
               <a target="_blank"
                  class="external-link"
                  href="https://github.com/google/material-design-icons">
@@ -179,11 +179,11 @@ export class ImageField extends Field {
         container: textParamsEl,
         fields: [
           new TextField('text', {
-            title: 'Text',
+            title: '文字',
           }),
           (fontFamilyField = new EnumField('font', {
-            title: 'Font',
-            helpText: 'From fonts.google.com'
+            title: '字体',
+            helpText: '源自fonts.google.com'
           }))
         ]
       });
@@ -215,13 +215,13 @@ export class ImageField extends Field {
         container: spaceFormContainer,
         fields: [
           (this.spaceFormTrimField_ = new BooleanField('trim', {
-            title: 'Trim whitespace',
+            title: '剪除空白',
             defaultValue: true,
-            offText: `Don't trim`,
-            onText: 'Trim'
+            offText: `不剪除`,
+            onText: '剪除'
           })),
           (this.spaceFormPaddingField_ = new RangeField('pad', {
-            title: 'Padding',
+            title: '衬垫',
             defaultValue: this.params_.defaultValuePadding || 0,
             min: -0.1,
             max: 0.5, // 1/2 of min(width, height)

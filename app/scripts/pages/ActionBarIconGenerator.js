@@ -52,8 +52,8 @@ export class ActionBarIconGenerator extends BaseGenerator {
       container: '#inputs-form',
       fields: [
         new studio.ImageField('source', {
-          title: 'Source',
-          helpText: 'Must be transparent',
+          title: '源',
+          helpText: '必须透明',
           maxFinalSize: { w: 128, h: 128 },
           clipartNoTrimPadding: true,
           defaultValueClipart: 'add_circle',
@@ -66,22 +66,22 @@ export class ActionBarIconGenerator extends BaseGenerator {
         }),
         (nameField = new studio.TextField('name', {
           newGroup: true,
-          title: 'Name',
-          helpText: 'Used when generating ZIP files.',
+          title: '名称',
+          helpText: '生成zip文件时使用为资源名',
           defaultValue: defaultNameForSourceValue_({})
         })),
         new studio.EnumField('theme', {
           title: 'Theme',
           buttons: true,
           options: [
-            { id: 'light', title: 'Light' },
-            { id: 'dark', title: 'Dark' },
-            { id: 'custom', title: 'Custom' }
+            { id: 'light', title: '亮' },
+            { id: 'dark', title: '暗' },
+            { id: 'custom', title: '自定义' }
           ],
           defaultValue: 'light'
         }),
         (customColorField = new studio.ColorField('color', {
-          title: 'Color',
+          title: '颜色',
           defaultValue: 'rgba(33, 150, 243, .6)',
           alpha: true
         }))

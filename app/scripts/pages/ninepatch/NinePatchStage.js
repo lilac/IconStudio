@@ -63,9 +63,9 @@ export class NinePatchStage {
       this.editMode = $(ev.currentTarget).val();
       $('.trim-button').toggle(this.editMode == 'stretch');
       $('.find-region-button').text({
-        stretch: 'Auto-stretch',
-        padding: 'Auto-padding',
-        opticalbounds: 'Auto-bounds'
+        stretch: '自动拉伸',
+        padding: '自动衬垫',
+        opticalbounds: '自动边界'
       }[this.editMode]);
       $('.stage-which input').prop('checked', false);
       $(ev.currentTarget).prop('checked', true);
