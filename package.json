@@ -7,6 +7,7 @@
     "browserify": "^13.0.0",
     "del": "^2.2.0",
     "es6-promise": "^4.0.5",
+    "gh-pages": "^1.0.0",
     "globby": "^6.1.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
@@ -50,7 +51,8 @@
   },
   "private": true,
   "scripts": {
-    "postinstall": "bower install"
+    "postinstall": "bower install",
+    "deploy": "gh-pages -d dist -o github"
   },
   "dependencies": {
     "zipjs-browserify": "^1.0.1"
